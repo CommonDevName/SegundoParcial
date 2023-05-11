@@ -7,7 +7,7 @@ package segundoparcial;
 public class SegundoParcial {
 
     public static void main(String[] args) {
-        
+        Execution.RunApp();
     }
     
 }

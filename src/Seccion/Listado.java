@@ -1,16 +1,24 @@
 package Seccion;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import static segundoparcial.Execution.dataInput;
 
 public class Listado {
     
     public static ArrayList <Seccion> Lista = new ArrayList<>();
 
     public static void ListaSecciones(){
-        Scanner dataInput = new Scanner(System.in);
+        boolean condition = true;
+        String question;
         do{
-            Lista.add(dataInput.nextInt(), dataInput.next(), dataInput.next(), dataInput.next(), dataInput.next(), dataInput.next(), dataInput.next(), dataInput.next())    
-        }while();
+            System.out.println("\nAgrege los datos pertinentes\n");
+            Lista.add(new Seccion(dataInput.nextInt(), dataInput.next(), dataInput.nextFloat(), dataInput.nextFloat(), dataInput.nextInt(), dataInput.nextInt(), dataInput.nextInt(), dataInput.nextInt()));  
+            System.out.println("\nQuiere agregar otro? Y o N.\n");
+            question = dataInput.next();
+            switch(question){
+                case "Y"->{}
+                case "N"->{condition = false;}
+            }
+        }while(condition);
     }
 }
